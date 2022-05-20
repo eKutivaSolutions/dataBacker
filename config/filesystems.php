@@ -44,6 +44,29 @@ return [
             'throw' => false,
         ],
 
+        'backups' => [
+            'driver' => 'local',
+            'root'   => storage_path('app/backups'),
+        ],
+
+        'sftp' => [
+            'driver'     => 'sftp',
+            'host'       => env('SFTP_HOST'),
+
+            // Settings for basic authentication...
+            'username'   => env('SFTP_USERNAME'),
+            //            'password' => env('SFTP_PASSWORD'),
+
+            // Settings for SSH key based authentication with encryption password...
+            'privateKey' => env('SFTP_PRIVATE_KEY'),
+            //            'password'   => env('SFTP_PASSWORD'),
+
+            // Optional SFTP Settings...
+            'port'       => (int)env('SFTP_PORT', 22),
+            'root'       => env('SFTP_ROOT'),
+            // 'timeout' => 30,
+        ],
+
         's3' => [
             'driver' => 's3',
             'key' => env('AWS_ACCESS_KEY_ID'),

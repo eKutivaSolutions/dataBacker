@@ -19,6 +19,10 @@ return [
                  */
                 'include'                       => [
                     env('BASE_SITES_PATH') . '/ekuschool/api.ekuschool/storage/app',
+                    env('BASE_SITES_PATH') . '/imgc/api.ekuschool/storage/app',
+                    env('BASE_SITES_PATH') . '/liceuavicena/api.ekuschool/storage/app',
+                    env('BASE_SITES_PATH') . '/cemoc/api.ekuschool/storage/app',
+                    env('BASE_SITES_PATH') . '/ifacet/api.ekuschool/storage/app',
                 ],
 
                 /*
@@ -80,7 +84,7 @@ return [
              * For a complete list of available customization options, see https://github.com/spatie/db-dumper
              */
             'databases' => [
-                'ekuschool', 'blog','imcg'
+                'ekuschool', 'blog', 'imcg',
             ],
         ],
 
@@ -116,7 +120,7 @@ return [
              * The disk names on which the backups will be stored.
              */
             'disks'           => [
-                'backups','sftp'
+                'backups', 'sftp',
             ],
         ],
 
